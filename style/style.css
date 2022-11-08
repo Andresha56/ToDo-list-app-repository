@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Quicksand:wght@500;700&display=swap');
+*{
+    padding:0px;
+    margin: 0px;
+    font-family: 'Quicksand', sans-serif;
+}
+:root{
+    --bg-col:#242124;
+    --text-col:#414A4C;
+    --heading-font:'Courgette', cursive
+}
+
+
+body{
+    background-color: var(--bg-col);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 97%;
+    margin: auto;
+}
+main h1{
+    font-family:var(--heading-font);
+    font-size:2.5rem;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 6rem;
+    color: #ffffff;
+}
+form{
+    margin-bottom: 50px;
+}
+input{
+    padding: 5px 30px;
+    outline: 0;
+    border: 0;
+    border-radius: 2px;
+    font-size: 1.2rem;
+    width: 50vw;
+    margin-right: 20px;
+    color: var(--text-col);
+   margin-bottom: 10px;
+}
+.btn{
+    padding: 5px 20px 5px 20px ;
+    border-radius: 2px;
+    background-color: #ffffff;
+    color:var(--text-col) ;
+    border: 0;
+    font-weight: 700;
+    font-size: 1rem;
+}
+#ShowTasks  h2{
+    font-size: 2rem;
+    font-weight:500;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.todoDivs{
+    padding: 5px 10px;
+    border-radius: 2px;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items:center;
+    background-color: #ffffff;
+    justify-content:space-between;
+    color: var(--text-col);
+}
+#btnCon{
+    display: flex;
+}
+#btnCon .dinamic-btns{
+    color: var(--text-col);
+    padding:5px;
+    font-family: var(--text-font);
+    border: 0;
+    border-radius: 2px;
+    font-weight: 700;
+    width:30px ;
+}
+#btnCon button i{
+    color: #242124;
+}
+#dinamicDelBtn{
+    margin-left: 10px;
+}
+#btnCon #dinamicDelBtn:hover{
+    background-color: #9b111e;
+    transition: all 0.7s ease;
+}
+#btnCon #dinamicDelBtn:hover i{
+    color: #ffffff;
+    transition: all 0.7s ease;
+}
+#dinamicEditBtn:hover{
+    background-color:#014e2d;
+    transition: all 0.7s ease;  
+}
+
+#dinamicEditBtn:hover i{
+    color:#fff;
+}
+
+
+/* --------editiable-content--decor----- */
+#contentEditable{
+    border: 0;
+    width: 100%;
+    outline: none;
+}
