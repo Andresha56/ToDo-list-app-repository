@@ -103,7 +103,14 @@ input{
     color:#fff;
 }
 
-
+/* ----------edit--btn---success-- */
+#editBtnSucc{
+    display: none;
+}
+#editBtnSucc:hover{
+    background-color: #014e2d;
+    color: #fff;
+}
 /* --------editiable-content--decor----- */
 #contentEditable{
     border: 0;

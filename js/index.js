@@ -22,6 +22,7 @@ document.getElementById("AddBtn").addEventListener("click", (e) => {
     todoDiv.appendChild(para);
     // ------added--id--in-p-to-make-the-content-editable
     para.id="contentEditable";
+    para.className="editPText"
     para.innerText = todoText;
     AddTodo.value= " ";
     
@@ -31,7 +32,6 @@ document.getElementById("AddBtn").addEventListener("click", (e) => {
     btnDiv.id = "btnCon";
 
     // -----action--btns----
-
     // -----edit---btn-----
     let editBtn = document.createElement("button");
     btnDiv.appendChild(editBtn);
@@ -43,12 +43,13 @@ document.getElementById("AddBtn").addEventListener("click", (e) => {
     editBtn.id = "dinamicEditBtn";
     editBtn.title="edit";
 
-    // ---edit--success--btn---
+    // ---edit--btn-success--
     let successbtn=document.createElement("button");
     btnDiv.appendChild(successbtn);
     let successMsg=document.createTextNode("Ok");
     successbtn.append(successMsg);
-    successbtn.className="dinamic-btns"
+    successbtn.className="dinamic-btns";
+    successbtn.id="editBtnSucc";
 
     // ----delete--btn--
     let delBtn = document.createElement("button");
@@ -70,12 +71,17 @@ document.getElementById("AddBtn").addEventListener("click", (e) => {
 
     // ------edit---todos----
     editBtn.addEventListener("click",()=>{
-        document.getElementById("contentEditable").contentEditable='true';
-        DelIcon.classList.remove("fas fa-trash-alt");
-        let success=document.createTextNode("Ok");
-        DelIcon.append(success);
+        a=document.getElementById("contentEditable").contentEditable='true';
+        console.log(a)
+        successbtn.style.display="block"
+        editBtn.style.display="none";
     });
-
+    // -----edit---dodos---false---
+    successbtn.addEventListener("click",()=>{
+        document.getElementsByTagName("editPText").contentEditable='false';
+        successbtn.style.display="none"
+        editBtn.style.display="block";
+    })
 });
 
 
